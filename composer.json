@@ -1,0 +1,13 @@
+{
+  "name": "app/test",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "secure-http": false
+  },
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.0"
+  }
+}
