@@ -120,7 +120,7 @@ class JsonAPI {
     public function getEventById($id) {
         $this->events = array_values($this->events);
         $key = array_search($id, array_column($this->events, 'id'), true);        
-        if ($key) {
+        if (isset($key)) {
             $findArray = $this->events[$key];
             if ($findArray && isset($findArray['title'])) {
                 return $findArray['title'];
@@ -132,7 +132,7 @@ class JsonAPI {
      * @return string
      */
     public function processCollectedData() {
-        if (empty($this->events) || empty($this->instances) | empty($this->venues)) {
+        if (empty($this->events) || empty($this->instances) || empty($this->venues)) {
             return 'No events to show';
         }
 
